@@ -24,7 +24,7 @@ export default function (ctx, inject) {
     "options": {
       "path": "/",
       "sameSite": "lax",
-      "secure": true,
+      "secure": false,
       "expires": 90
     }
   },
@@ -52,7 +52,7 @@ export default function (ctx, inject) {
   },
   "endpoints": {
     "login": {
-      "url": "/api/v1/login",
+      "url": "/login",
       "method": "post"
     },
     "logout": {

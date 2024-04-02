@@ -2,139 +2,139 @@
   {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/dashboard.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/dashboard.vue",
     "chunkName": "pages/dashboard"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/login.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/login.vue",
     "chunkName": "pages/login"
   },
   {
     "path": "/nfts",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts.vue",
     "chunkName": "pages/nfts",
     "children": [
       {
         "name": "nfts",
         "path": "",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/index.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/index.vue",
         "chunkName": "pages/nfts/index"
       },
       {
         "name": "nfts-activities",
         "path": "activities",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/activities.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/activities.vue",
         "chunkName": "pages/nfts/activities"
       },
       {
         "name": "nfts-admin",
         "path": "admin",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/admin.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/admin.vue",
         "chunkName": "pages/nfts/admin"
       },
       {
         "name": "user-collection",
         "path": "/@:user/collection",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/collection/index.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/collection/index.vue",
         "chunkName": "pages/nfts/collection/index"
       },
       {
         "name": "user-gallery",
         "path": "/@:user/gallery",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/gallery/index.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/gallery/index.vue",
         "chunkName": "pages/nfts/gallery/index"
       },
       {
         "name": "nfts-market",
         "path": "market",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/market.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/market.vue",
         "chunkName": "pages/nfts/market"
       },
       {
         "name": "nfts-mint",
         "path": "mint",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/mint.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/mint.vue",
         "chunkName": "pages/nfts/mint"
       },
       {
         "name": "nfts-official",
         "path": "official",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/official/index.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/official/index.vue",
         "chunkName": "pages/nfts/official/index"
       },
       {
         "name": "nfts-profile",
         "path": "profile",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/profile.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/profile.vue",
         "chunkName": "pages/nfts/profile"
       },
       {
         "name": "nfts-search",
         "path": "search",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/search.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/search.vue",
         "chunkName": "pages/nfts/search"
       },
       {
         "name": "user-collection-series",
         "path": "/@:user/collection/:series",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/collection/_series.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/collection/_series.vue",
         "chunkName": "pages/nfts/collection/_series"
       },
       {
         "name": "user-gallery-series",
         "path": "/@:user/gallery/:series",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/gallery/_series.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/gallery/_series.vue",
         "chunkName": "pages/nfts/gallery/_series"
       },
       {
         "name": "nfts-official-series",
         "path": "official/:series",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/official/_series.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/official/_series.vue",
         "chunkName": "pages/nfts/official/_series"
       },
       {
         "name": "nfts-series",
         "path": ":series",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/nfts/_series.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/nfts/_series.vue",
         "chunkName": "pages/nfts/_series"
       }
     ]
   },
   {
     "path": "/pool",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/pool.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/pool.vue",
     "chunkName": "pages/pool",
     "children": [
       {
         "name": "pool",
         "path": "",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/pool/index.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/pool/index.vue",
         "chunkName": "pages/pool/index"
       },
       {
         "name": "pool-add",
         "path": "add",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/pool/add.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/pool/add.vue",
         "chunkName": "pages/pool/add"
       },
       {
         "name": "pool-create",
         "path": "create",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/pool/create.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/pool/create.vue",
         "chunkName": "pages/pool/create"
       },
       {
         "name": "pool-pools",
         "path": "pools",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/pool/pools.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/pool/pools.vue",
         "chunkName": "pages/pool/pools"
       },
       {
         "name": "pool-remove",
         "path": "remove",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/pool/remove.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/pool/remove.vue",
         "chunkName": "pages/pool/remove"
       }
     ]
@@ -142,72 +142,84 @@
   {
     "name": "proposals",
     "path": "/proposals/:id?",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/proposals.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/proposals.vue",
     "chunkName": "pages/proposals"
   },
   {
     "name": "publish",
     "path": "/publish",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/publish.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/publish.vue",
     "chunkName": "pages/publish"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/index.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "sort",
     "path": "/:sort(hot|trending|promoted|payout|payout_comments|muted|created|curated)",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/_sort/index.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_sort/index.vue",
     "chunkName": "pages/_sort/index"
   },
   {
     "path": "/@:user",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user.vue",
     "chunkName": "pages/_user",
     "children": [
       {
         "name": "user",
         "path": "",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/index.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/index.vue",
         "chunkName": "pages/_user/index"
       },
       {
         "name": "user-comments",
         "path": "comments",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/comments.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/comments.vue",
         "chunkName": "pages/_user/comments"
       },
       {
         "name": "user-followers",
         "path": "followers",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/followers.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/followers.vue",
         "chunkName": "pages/_user/followers"
       },
       {
         "name": "user-following",
         "path": "following",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/following.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/following.vue",
         "chunkName": "pages/_user/following"
       },
       {
         "name": "user-replies",
         "path": "replies",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/replies.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/replies.vue",
         "chunkName": "pages/_user/replies"
+      },
+      {
+        "name": "user-scheduledposts",
+        "path": "scheduledposts",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/scheduledposts.vue",
+        "chunkName": "pages/_user/scheduledposts"
+      },
+      {
+        "name": "user-scheduledposts-orig",
+        "path": "scheduledposts-orig",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/scheduledposts-orig.vue",
+        "chunkName": "pages/_user/scheduledposts-orig"
       },
       {
         "name": "user-settings",
         "path": "settings",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/settings.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/settings.vue",
         "chunkName": "pages/_user/settings"
       },
       {
         "name": "user-wallet",
         "path": "wallet",
-        "component": "/Users/iftekhar/Documents/projects/outpost/pages/_user/wallet.vue",
+        "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_user/wallet.vue",
         "chunkName": "pages/_user/wallet"
       }
     ]
@@ -215,19 +227,19 @@
   {
     "name": "sort-tag",
     "path": "/:sort(hot|trending|promoted|payout|payout_comments|muted|created|curated)/:tag",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/_sort/_tag/index.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/_sort/_tag/index.vue",
     "chunkName": "pages/_sort/_tag/index"
   },
   {
     "name": "user-feed",
     "path": "/@:user/feed",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/feed.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/feed.vue",
     "chunkName": "pages/_user/feed"
   },
   {
     "name": "user-post",
     "path": "/@:user/:post",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/post.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/post.vue",
     "chunkName": "pages/_user/_post"
   },
   {
@@ -238,15 +250,63 @@
     }
   },
   {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "desktop.ini",
+    "path": "/desktop.ini",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/desktop.ini"
+  },
+  {
     "name": "faq",
     "path": "/faq",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/static.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
     "chunkName": "pages/faq"
+  },
+  {
+    "name": "faqs",
+    "path": "/faqs",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/faqs"
+  },
+  {
+    "name": "principles",
+    "path": "/principles",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/principles"
+  },
+  {
+    "name": "promos",
+    "path": "/promos",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/promos"
+  },
+  {
+    "name": "supporters",
+    "path": "/supporters",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/supporters"
+  },
+  {
+    "name": "team",
+    "path": "/team",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/team"
   },
   {
     "name": "tos",
     "path": "/tos",
-    "component": "/Users/iftekhar/Documents/projects/outpost/pages/static.vue",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
     "chunkName": "pages/tos"
+  },
+  {
+    "name": "updates",
+    "path": "/updates",
+    "component": "/Users/iftekhar/Documents/projects/hon-outpost/pages/static.vue",
+    "chunkName": "pages/updates"
   }
 ]
