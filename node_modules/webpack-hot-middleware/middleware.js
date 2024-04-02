@@ -9,6 +9,8 @@ function webpackHotMiddleware(compiler, opts) {
     typeof opts.log == 'undefined' ? console.log.bind(console) : opts.log;
   opts.path = opts.path || '/__webpack_hmr';
   opts.heartbeat = opts.heartbeat || 10 * 1000;
+  opts.statsOptions =
+    typeof opts.statsOptions == 'undefined' ? {} : opts.statsOptions;
 
   var eventStream = createEventStream(opts.heartbeat);
   var latestStats = null;
@@ -31,7 +33,13 @@ function webpackHotMiddleware(compiler, opts) {
     if (closed) return;
     // Keep hold of latest stats so they can be propagated to new clients
     latestStats = statsResult;
-    publishStats('built', latestStats, eventStream, opts.log);
+    publishStats(
+      'built',
+      latestStats,
+      eventStream,
+      opts.log,
+      opts.statsOptions
+    );
   }
   var middleware = function (req, res, next) {
     if (closed) return next();
@@ -40,7 +48,7 @@ function webpackHotMiddleware(compiler, opts) {
     if (latestStats) {
       // Explicitly not passing in `log` fn as we don't want to log again on
       // the server
-      publishStats('sync', latestStats, eventStream);
+      publishStats('sync', latestStats, eventStream, false, opts.statsOptions);
     }
   };
   middleware.publish = function (payload) {
@@ -114,23 +122,41 @@ function createEventStream(heartbeat) {
   };
 }
 
-function publishStats(action, statsResult, eventStream, log) {
-  var stats = statsResult.toJson({
-    all: false,
-    cached: true,
-    children: true,
-    modules: true,
-    timings: true,
-    hash: true,
-  });
-  // For multi-compiler, stats will be an object with a 'children' array of stats
-  var bundles = extractBundles(stats);
+function publishStats(action, statsResult, eventStream, log, statsOptions) {
+  var resultStatsOptions = Object.assign(
+    {
+      all: false,
+      cached: true,
+      children: true,
+      modules: true,
+      timings: true,
+      hash: true,
+      errors: true,
+      warnings: true,
+    },
+    statsOptions
+  );
+
+  var bundles = [];
+
+  // multi-compiler stats have stats for each child compiler
+  // see https://github.com/webpack/webpack/blob/main/lib/MultiCompiler.js#L97
+  if (statsResult.stats) {
+    var processed = statsResult.stats.map(function (stats) {
+      return extractBundles(normalizeStats(stats, resultStatsOptions));
+    });
+
+    bundles = processed.flat();
+  } else {
+    bundles = extractBundles(normalizeStats(statsResult, resultStatsOptions));
+  }
+
   bundles.forEach(function (stats) {
     var name = stats.name || '';
 
     // Fallback to compilation name in case of 1 bundle (if it exists)
-    if (bundles.length === 1 && !name && statsResult.compilation) {
-      name = statsResult.compilation.name || '';
+    if (!name && stats.compilation) {
+      name = stats.compilation.name || '';
     }
 
     if (log) {
@@ -143,16 +169,47 @@ function publishStats(action, statsResult, eventStream, log) {
           'ms'
       );
     }
+
     eventStream.publish({
       name: name,
       action: action,
       time: stats.time,
       hash: stats.hash,
-      warnings: stats.warnings || [],
-      errors: stats.errors || [],
+      warnings: formatErrors(stats.warnings || []),
+      errors: formatErrors(stats.errors || []),
       modules: buildModuleMap(stats.modules),
     });
   });
+}
+
+function formatErrors(errors) {
+  if (!errors || !errors.length) {
+    return [];
+  }
+
+  if (typeof errors[0] === 'string') {
+    return errors;
+  }
+
+  // Convert webpack@5 error info into a backwards-compatible flat string
+  return errors.map(function (error) {
+    var moduleName = error.moduleName || '';
+    var loc = error.loc || '';
+    return moduleName + ' ' + loc + '\n' + error.message;
+  });
+}
+
+function normalizeStats(stats, statsOptions) {
+  var statsJson = stats.toJson(statsOptions);
+
+  if (stats.compilation) {
+    // webpack 5 has the compilation property directly on stats object
+    Object.assign(statsJson, {
+      compilation: stats.compilation,
+    });
+  }
+
+  return statsJson;
 }
 
 function extractBundles(stats) {

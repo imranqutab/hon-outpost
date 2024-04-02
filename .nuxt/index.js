@@ -63,7 +63,7 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    const globalNuxt = this.$root.$options.$nuxt
+    const globalNuxt = this.$root ? this.$root.$options.$nuxt : null
     if (process.client && !globalNuxt && typeof window !== 'undefined') {
       return window.$nuxt
     }
@@ -88,9 +88,9 @@ function registerModule (path, rawModule, options = {}) {
 }
 
 async function createApp(ssrContext, config = {}) {
-  const router = await createRouter(ssrContext, config)
-
   const store = createStore(ssrContext)
+  const router = await createRouter(ssrContext, config, { store })
+
   // Add this.$router into store actions/mutations
   store.$router = router
 
@@ -110,8 +110,8 @@ async function createApp(ssrContext, config = {}) {
         return titleChunk ? `${titleChunk} - ${config.APP_TITLE}` : `${config.APP_TITLE}`;
       },
       htmlAttrs: {
-        lang: 'en' },
-
+        lang: 'en'
+      },
       meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -126,7 +126,8 @@ async function createApp(ssrContext, config = {}) {
       { hid: 'twitter-image', name: 'twitter:image', content: `${config.APP_DOMAIN}/cover.png` }],
 
       link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }] };
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    };
 
     return head;
   },
@@ -199,6 +200,7 @@ async function createApp(ssrContext, config = {}) {
     req: ssrContext ? ssrContext.req : undefined,
     res: ssrContext ? ssrContext.res : undefined,
     beforeRenderFns: ssrContext ? ssrContext.beforeRenderFns : undefined,
+    beforeSerializeFns: ssrContext ? ssrContext.beforeSerializeFns : undefined,
     ssrContext
   })
 
