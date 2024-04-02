@@ -1,0 +1,67 @@
+import Vue from 'vue';
+
+import {
+  AlertPlugin,
+  AvatarPlugin,
+  BadgePlugin,
+  ButtonGroupPlugin,
+  ButtonPlugin,
+  CardPlugin,
+  FormCheckboxPlugin,
+  FormDatepickerPlugin,
+  FormFilePlugin,
+  FormGroupPlugin,
+  FormInputPlugin,
+  FormPlugin,
+  FormRadioPlugin,
+  FormSelectPlugin,
+  FormTagsPlugin,
+  FormTextareaPlugin,
+  ImagePlugin,
+  InputGroupPlugin,
+  LayoutPlugin,
+  ListGroupPlugin,
+  MediaPlugin,
+  ModalPlugin,
+  NavbarPlugin,
+  PaginationPlugin,
+  PopoverPlugin,
+  ProgressPlugin,
+  SpinnerPlugin,
+  TablePlugin,
+  TabsPlugin,
+  TooltipPlugin,
+  SidebarPlugin
+} from 'bootstrap-vue';
+
+Vue.use(AlertPlugin);
+Vue.use(AvatarPlugin);
+Vue.use(BadgePlugin);
+Vue.use(ButtonGroupPlugin);
+Vue.use(ButtonPlugin);
+Vue.use(CardPlugin);
+Vue.use(FormCheckboxPlugin);
+Vue.use(FormDatepickerPlugin);
+Vue.use(FormFilePlugin);
+Vue.use(FormGroupPlugin);
+Vue.use(FormInputPlugin);
+Vue.use(FormPlugin);
+Vue.use(FormRadioPlugin);
+Vue.use(FormSelectPlugin);
+Vue.use(FormTagsPlugin);
+Vue.use(FormTextareaPlugin);
+Vue.use(ImagePlugin);
+Vue.use(InputGroupPlugin);
+Vue.use(LayoutPlugin);
+Vue.use(ListGroupPlugin);
+Vue.use(MediaPlugin);
+Vue.use(ModalPlugin);
+Vue.use(NavbarPlugin);
+Vue.use(PaginationPlugin);
+Vue.use(PopoverPlugin);
+Vue.use(ProgressPlugin);
+Vue.use(SpinnerPlugin);
+Vue.use(TablePlugin);
+Vue.use(TabsPlugin);
+Vue.use(TooltipPlugin);
+Vue.use(SidebarPlugin);
