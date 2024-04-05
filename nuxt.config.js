@@ -272,7 +272,7 @@ export default {
           autoFetch: false
         },
         endpoints: {
-          login: { url: '/login', method: 'post' },
+          login: { url: '/api/v1/login', method: 'post' },
           logout: { url: '/api/v1/logout', method: 'post' },
           user: { url: '/api/v1/me', method: 'post' },
           csrf: false
