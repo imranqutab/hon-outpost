@@ -294,7 +294,7 @@ export default {
 
   server: {
     port: 8080,
-    host: process.env.NODE_ENV === 'production' ? '13.212.183.88' : 'localhost'
+    host: 'localhost'
   },
 
   router: {
