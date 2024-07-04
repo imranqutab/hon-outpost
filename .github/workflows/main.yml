@@ -24,8 +24,6 @@ jobs:
       # Install dependencies and build (if applicable)
       - name: Install Dependencies and Build
         run: |
-          npm install
-          # Add any build commands if your project requires it
           npm run build
           npm run build --modern
 
